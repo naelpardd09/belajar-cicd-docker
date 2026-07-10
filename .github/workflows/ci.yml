@@ -1,10 +1,11 @@
 name: Pipeline Pertama
 on:
     push:
-         branches: [ "main" ]
+        branches: [ "main" ]
 jobs:
     hello:
         runs-on: ubuntu-latest
+
         steps:
             - name: Ucapin salam
               run: echo "Halo, ini pipeline pertamaku!"
