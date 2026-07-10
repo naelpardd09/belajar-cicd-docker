@@ -1,0 +1,12 @@
+name: Pipeline Pertama
+On:
+    Push:
+         branches: [ "main" ]
+Jobs:
+    Hello:
+        runs-on: ubuntu-latest
+        Steps:
+            - name: Ucapin salam
+              run: echo "Halo, ini pipeline pertamaku!"
+            - name: Cek waktu sekarang
+              run: date             
