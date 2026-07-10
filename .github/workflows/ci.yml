@@ -31,3 +31,18 @@ jobs:
 
       - name: Run Linter
         run: flake8 app.py --max-line-length=120
+
+  test:
+    needs: lint           # baru jalan setelah lint
+    runs-on: ubuntu-latest 
+    steps:
+        - uses: actions/checkout@v4
+
+
+        - name: Install pytest
+          run: pip install pytest
+
+          
+        - name: Run unit tests
+          run: pytest test_app.py -v
+  
